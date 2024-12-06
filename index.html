@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Clique</title>
+    <link rel="icon" href="imagem/pngtree-glossy-golden-coin-png-image_925135-removebg-preview.png" type="image/png">
+    <link rel="stylesheet" href="CSS/Estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Cabeçalho do jogo -->
+        <header>
+            <h1>Jogo de Clique</h1>
+        </header>
+
+
+        <!-- Campo do nome do jogador -->
+        <div id="nomeContainer">
+            <span id="nomeExibicao">Nome: Maikel</span>
+            <button id="alterarNomeButton" onclick="editarNome()">Trocar</button>
+            <input type="text" id="nomeInput" value="Maikel" style="display: none;">
+        </div>
+
+        <main class="main-content">
+            <!-- Estatísticas do jogo -->
+            <section class="stats-container">
+                <div class="stats">
+                    <p id="contador" class="clicks-text">Cliques: 0</p>
+                    <p id="valorClique" class="valor-clique-text">Valor do Clique: 1</p>
+                    <p id="nivel" class="nivel-text">Nível: 1</p>
+                    <p id="habilidadeStatus" class="habilidade-text">Habilidades adquiridas: 0</p>
+                    <p id="diamantes">Diamantes: 0</p>
+                </div>
+            </section>
+
+            <!-- Área de Jogo -->
+            <section class="game-area">
+                <div id="moedaContainer" onclick="clicar()">
+                    <img src="imagem/pngtree-glossy-golden-coin-png-image_925135-removebg-preview.png" alt="Moeda" id="moeda" />
+                </div>
+            </section>
+
+            <!-- Botões de Habilidade e Boosts -->
+            <section class="buttons-and-boosts">
+                <div class="buttons">
+                    <button id="comprarHabilidade1" onclick="comprarHabilidade1()" disabled class="btn habilidade-btn">Comprar Habilidade 1 (100 cliques)</button>
+                    <button id="comprarHabilidade2" onclick="comprarHabilidade2()" disabled class="btn habilidade-btn">Comprar Habilidade 2 (500 cliques)</button>
+                    <button id="comprarAutoClique" onclick="comprarAutoClique()" disabled class="btn habilidade-btn">Comprar AutoClique (2000 cliques)</button>
+                    <button id="prestigiar" onclick="prestigiar()" class="btn prestigio-btn">Prestigiar (5000 cliques)</button>
+                </div>
+                
+                <!-- Boosts -->
+                <div class="boosts-container">
+                    <button id="comprarBoost30Segundos" onclick="comprarBoost30Segundos()" class="btn boost-btn">Comprar Boost de 30 segundos (10 diamantes)</button>
+                    <button id="comprarBoost30Minutos" onclick="comprarBoost30Minutos()" class="btn boost-btn">Comprar Boost de 30 minutos (50 diamantes)</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Conquistas -->
+        <section class="conquistas-container">
+            <h2>Conquistas:</h2>
+            <ul id="conquistasList"></ul>
+        </section>
+    </div>
+
+    <script src="JS/contador.js"></script>
+</body>
+</html>
+
+
+
