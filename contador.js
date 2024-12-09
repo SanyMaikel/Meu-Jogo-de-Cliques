@@ -264,7 +264,7 @@ function adicionarConquista(conquista) {
     // Remove a conquista após 1 minuto
     setTimeout(() => {
         listaConquistas.removeChild(li);
-    }, 60000);  // 60 segundos = 1 minuto
+    }, 10000);  // 10 segundos
 }
 
 // Função para verificar conquistas avançadas e de longo prazo
